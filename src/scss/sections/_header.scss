@@ -8,7 +8,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding: 10px 0;
+    padding: 20px 0;
     width: 100%;
     min-height: fluid-value(25, 50);
     background-color: transparent;
@@ -52,7 +52,7 @@
   &._scroll {
     .header__body {
       padding: 0;
-      background-color: cl(color-sand);
+      background-color: cl(color-oil);
     }
 
     .header__logo {
