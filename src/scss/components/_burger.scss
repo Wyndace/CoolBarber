@@ -1,4 +1,6 @@
 .burger {
+  display: none;
+
   &::before {
     content: "";
     position: absolute;
@@ -44,7 +46,7 @@
         display: block;
         width: 26px;
         height: 2px;
-        background: cl(color-white);
+        background-color: cl(color-white);
       }
 
       &::before {
@@ -60,13 +62,13 @@
         display: inline-block;
         width: 100%;
         height: 2px;
-        background: cl(color-white);
+        background-color: cl(color-white);
         animation: show 0.6s ease-out forwards;
       }
 
       @keyframes up-rotate-back {
         0% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(-8px) rotate(45deg);
           transform-origin: center;
         }
@@ -85,7 +87,7 @@
 
       @keyframes down-rotate-back {
         0% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(8px) rotate(-45deg);
           transform-origin: center;
         }
@@ -104,12 +106,12 @@
 
       @keyframes show {
         29% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           opacity: 0;
         }
 
         30% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           opacity: 0;
         }
 
@@ -152,7 +154,7 @@
 
       &__menu {
         margin-top: 0;
-        background: cl(color-white);
+        background-color: cl(color-oil);
         opacity: 1;
         transition: all 0s ease, margin-top 1s ease-out;
         pointer-events: all;
@@ -165,14 +167,14 @@
         }
 
         30% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(-8px);
           transform-origin: center;
           animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         100% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(-8px) rotate(45deg);
           transform-origin: center;
         }
@@ -185,14 +187,14 @@
         }
 
         30% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(8px);
           transform-origin: center;
           animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         100% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           transform: translateY(8px) rotate(-45deg);
           transform-origin: center;
         }
@@ -204,16 +206,20 @@
         }
 
         30% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           opacity: 0;
         }
 
         100% {
-          background: cl(color-blue);
+          background-color: cl(color-tomato);
           opacity: 0;
         }
       }
     }
+  }
+
+  @media (max-width: $md) {
+    display: block;
   }
 }
 
@@ -222,7 +228,7 @@
     content: "";
     position: fixed;
     z-index: 2;
-    background: cl(color-black, 0.25);
+    background-color: cl(color-black, 0.4);
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease;
@@ -244,89 +250,64 @@
     max-width: 100%;
     gap: 35px 0;
 
-    .phones {
-      &__list {
-        align-items: flex-start;
-      }
+    .contacts-header {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 40px;
 
       &__item {
-        flex-direction: row-reverse;
-        gap: 0 16px;
-      }
-
-      &__name {
-        font-size: 12px;
-        color: cl(color-blue);
-      }
-
-      &__tel {
-        color: cl(color-blue);
-
-        &::after {
-          background: cl(color-blue);
-        }
-      }
-    }
-  }
-
-  .nav {
-    // .nav__list
-
-    &__list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 35px 0;
-    }
-
-    // .nav__item
-
-    &__item {
-      position: relative;
-      font: cl(font-base);
-      font-size: 18px;
-      color: cl(color-blue);
-
-      ._underline::after {
-        bottom: -1px;
-        background: cl(color-blue);
-      }
-
-      &:hover::after,
-      &._active::after {
+        justify-content: flex-end;
         width: 100%;
       }
+
+      &__text {
+        font: cl(color-base);
+        font-size: 18px;
+        text-align: right;
+        color: cl(color-white);
+      }
+
+      &__addr {
+        min-width: 145px;
+        max-width: 145px;
+      }
+
+      &__phone {
+        white-space: nowrap;
+      }
+
+      // .contacts-header__icon
+      &__icon {
+        min-width: 36px;
+        min-height: 36px;
+        max-width: 36px;
+        max-height: 36px;
+      }
+
+      // .contacts-header__text-sub
+      &__text-sub {
+        font-size: 16px;
+      }
     }
-  }
 
-  .custom-select-lang {
-    &-panel {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      overflow: visible;
-      max-width: 87px;
-      max-height: 100%;
-      background: transparent;
-      gap: 25px;
-    }
+    .nav {
+      // .nav__list
 
-    &-option {
-      display: block;
-      padding: 5px 6px;
-      height: 25px;
-      font: cl(font-base);
-      font-size: 18px;
-      line-height: 16px;
-      text-align: center;
-      text-decoration: underline;
-      color: cl(color-blue);
-      background-color: transparent;
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px 0;
+      }
 
-      &.is-selected {
-        text-decoration: none;
-        background-color: cl(color-gray);
+      // .nav__item
+
+      &__item {
+        position: relative;
+        font: cl(font-base);
+        font-size: 18px;
+        color: cl(color-port);
       }
     }
   }
