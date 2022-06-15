@@ -2,21 +2,23 @@
   // .nav__list
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: fluid-value(5, 10, $md);
   }
 
   // .nav__item
   &__item {
     display: inline-block;
-    padding: 15px 30px;
     font: cl(font-base);
-    color: cl(color-sand);
+    color: cl(color-port);
     background-color: transparent;
     transition: color 0.1s ease 0s;
   }
 
   // .nav__link
   &__link {
+    padding: fluid-value(5, 15, $md);
   }
 }
