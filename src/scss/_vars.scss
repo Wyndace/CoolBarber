@@ -8,10 +8,19 @@
   --color-white: #{hex-to-rgb(#fff)};
   --color-blue: #{hex-to-rgb(#26a4ec)};
   --color-sand: #{hex-to-rgb(#fbe0cd)};
-  --color-error: #{hex-to-rgb(#ef1e45)};
+  --color-error: #{hex-to-rgb(#e05263)};
+  --color-succes: #{hex-to-rgb(#4fe18a)};
+  --color-tomato: #{hex-to-rgb(#ff6e40)};
+  --color-dune: #{hex-to-rgb(#3b322d)};
+  --color-ebb: #{hex-to-rgb(#f7f7f7)};
+  --color-port: #{hex-to-rgb(#efe7e2)};
+  --color-bronco: #{hex-to-rgb(#b7aaa2)};
+  --color-oil: #{hex-to-rgb(#251d1a)};
+  --gradient: linear-gradient(90deg, rgba(#211814, 0.57) 0%, rgba(#261b17, 0.42) 100%);
 
   // Indents
-  --section-offset: 60px;
+  --section-offset: 120px;
+  --element-offset: 30px;
 
   // Borders
   --border-radius: 4px;
@@ -20,8 +29,14 @@
   --font-family: #{$font-family}, sans-serif;
 
   // Typefaces
-  --font-base: 400 #{fluid-value(16px, 18px, $xxs, $template-size)} / 140% #{cl(font-family)};
-  --font-bold: 700 #{fluid-value(22, 24)} / 140% #{cl(font-family)};
+  --font-base: 400 #{fluid-value(12, 15)} / 150% #{cl(font-family)};
+  --font-fira-bold: 700 #{fluid-value(14, 16)} / 150% #{cl(font-family)};
+  --font-fira-medium: 500 #{fluid-value(20, 24)} / 150% #{cl(font-family)};
+  --font-fira-title: 700 #{fluid-value(40, 48)} / 125% #{cl(font-family)};
+  --font-fira-heading: 900 #{fluid-value(64, 70)} / 110% #{cl(font-family)};
+  --font-montserrat-regular: 400 #{fluid-value(40, 48)} / 125% "Montserrat";
+  --font-playfair-bold: 700 #{fluid-value(16, 20)} / 152% "PlayfairDisplay";
+  --font-playfair-black: 900 #{fluid-value(32, 36)} / 133% "PlayfairDisplay";
 }
 
 // ====================================================================================================================================================================
