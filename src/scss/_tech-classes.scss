@@ -15,7 +15,7 @@
 
 ._list-reset {
   list-style: none;
-  margin: 10px;
+  margin: 0;
   padding: 0;
 }
 
@@ -96,16 +96,54 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -4px;
+    bottom: 0;
     display: block;
-    width: 0;
+    width: 100%;
     height: 1px;
-    background: cl(color-sand);
-    transition: width 0.5s ease 0s, right 0.5s ease 0s;
+    background: cl(color-tomato);
+    opacity: 0;
+    transition: opacity 0.5s ease 0s, bottom 0.5s ease 0s;
   }
 
-  &:hover::after,
   &._active::after {
+    bottom: 4px;
+    opacity: 1;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after, {
+      bottom: 4px;
+      opacity: 1;
+    }
+  }
+}
+
+._block {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    z-index: -1;
+    display: block;
     width: 100%;
+    height: 0;
+    background: cl(color-tomato);
+    transform: translateY(-50%);
+    transition: height 0.5s ease 0s;
+  }
+
+  &._active::after {
+    height: 100%;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after {
+      height: 100%;
+    }
   }
 }
