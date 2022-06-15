@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-family);
+  font: cl(font-base);
   background-color: $background;
 }
 
@@ -36,9 +36,23 @@ a {
 }
 
 .logo {
-  width: 150px;
-  height: 50px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  gap: 15px;
+
+  // .logo__img
+  &__img {
+    flex: 0 0 fluid-value(30, 45);
+    height: fluid-value(30, 45);
+  }
+
+  // .logo__text
+  &__text {
+    font: cl(font-fira-bold);
+    text-transform: uppercase;
+    color: cl(color-port);
+  }
 }
 
 // ========================================================================================================================================================================
