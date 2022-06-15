@@ -1,24 +1,48 @@
 <header class="header">
     <div class="header__body">
         <div class="_container header__container">
-            <div class="header__block">
-                <div class="header__logo logo _img-holder" data-scroll_to="body">
-                    <img src="./resources/back.png" alt="WynWebKit" ghiw-exclude />
+            <div class="header__logo logo">
+                <div class="logo__img _img-holder" data-scroll_to="body">
+                    <img src="./img/Logo.svg" alt="Cool Barber"/>
                 </div>
+                <p class="logo__text">Cool Barber</p>
             </div>
             <nav class="header__nav nav">
                 <ul data-da=".menu-burger__body, 768, 1" class="nav__list _list-reset">
                     <li class="nav__item">
-                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _underline">Item1</a>
+                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _block">About Us</a>
                     </li>
                     <li class="nav__item">
-                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _underline">Item2</a>
+                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _block">Our masters</a>
                     </li>
                     <li class="nav__item">
-                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _underline">Item3</a>
+                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _block">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _block">Testimonials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a data-scroll_to="#" href="#" class="nav__link _link-reset _block">Contacts</a>
                     </li>
                 </ul>
             </nav>
+            <ul data-da=".menu-burger__body, 768, 1"  class="header__contacts contacts-header _list-reset">
+                <li class="contacts-header__item">
+                    <address class="contacts-header__text-sub contacts-header__addr">302 W 50th St, NY, NY 10019</address>
+                    <svg class="contacts-header__icon">
+                        <use xlink:href="./img/sprite.svg#map"></use>
+                    </svg>
+                </li>
+                <li class="contacts-header__item">
+                    <div>
+                        <a href="tel:88000000000" class="contacts-header__text contacts-header__phone">8 (800) 000-00-00</a>
+                        <p class="contacts-header__text-sub">Daily from 9 to 20</p>
+                    </div>
+                    <svg class="contacts-header__icon">
+                        <use xlink:href="./img/sprite.svg#phone"></use>
+                    </svg>
+                </li>
+            </ul>
             <div data-burger class="header__burger burger">
                 <button type="button" data-burger_button class="burger__icon _btn-reset">
                     <span></span>
