@@ -1,6 +1,7 @@
 .header {
   position: absolute;
   left: 0;
+  right: 0;
   z-index: 50;
   min-height: 10px;
 
@@ -8,9 +9,9 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding: 20px 0;
+    padding: fluid-value(10, 20) 0;
     width: 100%;
-    min-height: fluid-value(25, 50);
+    min-height: fluid-value(15, 50);
     background-color: transparent;
     transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
   }
