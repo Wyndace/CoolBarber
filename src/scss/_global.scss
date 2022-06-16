@@ -55,4 +55,29 @@ a {
   }
 }
 
+.subtitle {
+  margin: 0;
+  border: 1px solid cl(color-port);
+  padding: 10px 25px;
+  font: cl(font-playfair-bold);
+  font-size: fluid-value(12, 14);
+  white-space: nowrap;
+  color: cl(color-white);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: fluid-value(10, 20) fluid-value(25, 50);
+  font: cl(font-playfair-bold);
+  white-space: nowrap;
+
+  // .btn_primary
+  &_primary {
+    color: cl(color-white);
+    background-color: cl(color-tomato);
+  }
+}
+
 // ========================================================================================================================================================================
