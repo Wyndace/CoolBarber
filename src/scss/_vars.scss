@@ -33,10 +33,10 @@
   --font-fira-bold: 700 #{fluid-value(14, 16)} / 150% #{cl(font-family)};
   --font-fira-medium: 500 #{fluid-value(20, 24)} / 150% #{cl(font-family)};
   --font-fira-title: 700 #{fluid-value(40, 48)} / 125% #{cl(font-family)};
-  --font-fira-heading: 900 #{fluid-value(64, 70)} / 110% #{cl(font-family)};
   --font-montserrat-regular: 400 #{fluid-value(40, 48)} / 125% "Montserrat";
   --font-playfair-bold: 700 #{fluid-value(16, 20)} / 152% "PlayfairDisplay";
   --font-playfair-black: 900 #{fluid-value(32, 36)} / 133% "PlayfairDisplay";
+  --font-playfair-heading: 900 #{fluid-value(50, 70)} / 110% "PlayfairDisplay";
 }
 
 // ====================================================================================================================================================================
