@@ -1,6 +1,6 @@
 // Here are the main styles for all pages.
 
-// ====================================================================================================================================================================
+@use "sass:color";
 
 html {
   box-sizing: border-box;
@@ -77,6 +77,24 @@ a {
   &_primary {
     color: cl(color-white);
     background-color: cl(color-tomato);
+    transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+
+    &:active,
+    &._tapped {
+      background-color: color.mix(#ff6e40, #000, 90%);
+      transform: scale(0.9);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: color.mix(#ff6e40, #000, 90%);
+      }
+
+      &:active,
+      &._tapped {
+        transform: scale(0.9);
+      }
+    }
   }
 }
 
