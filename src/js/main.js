@@ -1,9 +1,6 @@
 // === JS for index.html =========================================================================================================================================
 
-import sum from "./components/ex.js"
 import {tapAnimation} from "./functions/_animation.js";
-
-console.log(sum(2, 10))
 
 
 // ==== Button Tap animation ======================================================================================================================================
@@ -11,6 +8,12 @@ console.log(sum(2, 10))
 document.addEventListener('click', (e) => {
     if (e.target.closest(".btn")) {
         tapAnimation(e.target.closest(".btn"));
+    }
+    if (e.target.closest("._underline")) {
+        tapAnimation(e.target.closest("._underline"), 630);
+    }
+    if (e.target.closest("._block")) {
+        tapAnimation(e.target.closest("._block"), 600);
     }
 });
 
