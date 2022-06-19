@@ -1,5 +1,19 @@
 .page {
+  // .page__title
+  &__title {
+    margin: 0;
+    font: cl(font-fira-title);
+    text-align: center;
+    color: cl(color-white);
+  }
+
   // .page__hero
   &__hero {
+    padding: fluid-value(100, 120) 0;
+  }
+
+  // .page__aboutus
+  &__aboutus {
+    padding: fluid-value(100, 120) 0;
   }
 }

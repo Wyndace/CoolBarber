@@ -1,0 +1,51 @@
+.aboutus {
+  // .aboutus__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .aboutus__title
+  &__title {
+  }
+
+  // .aboutus__text
+  &__text {
+    margin: 15px 0 0;
+    max-width: 580px;
+    font: cl(font-base);
+    text-align: center;
+    color: cl(color-port);
+  }
+
+  &__lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 10px;
+  }
+
+  // .aboutus__pictures
+  &__pictures {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px 10px;
+  }
+
+  // .aboutus__picture
+  &__picture {
+    grid-column: 3 span;
+    width: auto;
+    height: fluid-value(140, 280);
+
+    // .aboutus__picture_wide
+    &_wide {
+      grid-column: 6 span;
+      width: fluid-value(290, 580);
+      height: fluid-value(168, 337);
+    }
+  }
+}
