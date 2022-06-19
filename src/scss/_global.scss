@@ -56,12 +56,15 @@ a {
 }
 
 .subtitle {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   border: 1px solid cl(color-port);
   padding: 10px 25px;
   font: cl(font-playfair-bold);
   font-size: fluid-value(12, 14);
   white-space: nowrap;
+  text-transform: uppercase;
   color: cl(color-white);
 }
 
