@@ -23,7 +23,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 60px;
+    margin: 60px 0;
     gap: 10px;
   }
 
@@ -47,5 +47,12 @@
       width: fluid-value(290, 580);
       height: fluid-value(168, 337);
     }
+  }
+
+  // .aboutus__row
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
   }
 }
