@@ -22,16 +22,20 @@
     }
   }
 
-  // .hero__container
-  &__container {
+  &__body {
     position: relative;
     padding-top: fluid-value(75, 100);
+    padding-bottom: fluid-value(75, 100);
     min-height: fluid-value(70, 90, $units: vh);
     background-image: url("../img/hero/bg.png");
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: content-box;
+  }
+
+  // .hero__container
+  &__container {
   }
 
   // .hero__text
@@ -60,5 +64,9 @@
   // .hero__link
   &__link {
     z-index: 2;
+  }
+
+  // .hero__benefits
+  &__benefits {
   }
 }
