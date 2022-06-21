@@ -8,15 +8,12 @@
 
   // .aboutus__title
   &__title {
+    margin: 15px 0 0;
   }
 
   // .aboutus__text
   &__text {
-    margin: 15px 0 0;
-    max-width: 580px;
-    font: cl(font-base);
-    text-align: center;
-    color: cl(color-port);
+
   }
 
   &__lists {
@@ -52,6 +49,7 @@
   // .aboutus__row
   &__row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
