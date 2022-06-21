@@ -1,5 +1,5 @@
 import {parseBoolean} from "./_functions.js";
-import Swiper  from "swiper"
+import Swiper, { Navigation, Pagination, Scrollbar, Autoplay } from "swiper"
 
 export default () => {
   const sliders = document.querySelectorAll("[data-slider]");
@@ -11,7 +11,7 @@ export default () => {
         let sliderOptions = {
           direction: optionsArray[0],
           initialSlide: parseInt(optionsArray[1]),
-          slidesPerView: parseInt(optionsArray[2]),
+          slidesPerView: parseInt(optionsArray[2]) | 'auto',
           effect: optionsArray[3],
           speed: parseInt(optionsArray[4]),
           enabled: parseBoolean(optionsArray[5]),
@@ -22,6 +22,7 @@ export default () => {
         };
 
         const swiper = new Swiper('[data-slider]', {
+          modules: [Navigation, Pagination, Scrollbar, Autoplay],
           speed: sliderOptions.speed,
           initialSlide: sliderOptions.initialSlide,
           effect: sliderOptions.effect,
@@ -29,13 +30,27 @@ export default () => {
           centeredSlides: sliderOptions.centeredSlides,
           direction: sliderOptions.direction,
           loop: sliderOptions.loop,
-          slidesPerView: sliderOptions.slidesPerView,
+          slidesPerView: sliderOptions.slidesPerView - 3,
+          spaceBetween: 20,
 
-          autoplay: sliderOptions.autoplay === true ? {delay: sliderOptions.apDelay} : sliderOptions.autoplay,
+          breakpoints : {
+            966: {
+              slidesPerView:sliderOptions.slidesPerView - 1,
+            },
 
-          navigation: slider.querySelector('[data-slider_button]') != null ? {
-            nextEl: "[data-slider_button='next']",
+            1311: {
+              slidesPerView: sliderOptions.slidesPerView,
+            }
+          },
+
+          autoplay: sliderOptions.autoplay === true ? {
+            delay: sliderOptions.apDelay,
+            pauseOnMouseEnter: true
+          } : sliderOptions.autoplay,
+
+          navigation: document.querySelector('[data-slider_button]') != null ? {
             prevEl: "[data-slider_button='prev']",
+            nextEl: "[data-slider_button='next']",
           } : false,
 
           pagination: slider.querySelector('[data-slider_pagination]') != null ? {
@@ -48,10 +63,11 @@ export default () => {
 
           scrollbar: slider.querySelector('[data-slider_scrollbar]') != null ? {
             el: '[data-slider_scrollbar]',
-            draggable: parseBoolean(slider.querySelector('[data-slider_scrollbar]').dataset.slider_scrollbar)
+            draggable: parseBoolean(slider.querySelector('[data-slider_scrollbar]').dataset.slider_scrollbar),
           } : false,
         });
       } else new Swiper('[data-slider]');
     });
+
   }
 }
