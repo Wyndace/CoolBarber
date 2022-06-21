@@ -1,0 +1,18 @@
+<section class="page__testimonials testimonials" id="testimonials">
+    <div class="testimonials__container _container">
+        <h2 class="testimonials__title page__title">Testimonials</h2>
+        <p class="testimonials__text page__subtitle">Подзаголовок, который раскрывает подробности заголовка и призывает сделать целевое действие</p>
+        <div class="testimonials__body">
+            <div class="testimonials__slider swiper" data-slider="horizontal, 0, 4, slide, 400, true, false, true, true, 1500">
+                <div class="testimonials__wrapper swiper-wrapper">
+                    @include('../components/slide-testimonials.html', {'img': './img/testimonials/01.png', 'name': 'Darrell Steward', 'description': 'Describe the feedback or end result the person received after interacting with you. What exactly did it give him. You can describe the result in numbers to be specific.'})
+                    @include('../components/slide-testimonials.html', {'img': './img/testimonials/02.png', 'name': 'Marvin McKinney', 'description': 'Describe the feedback or end result the person received after interacting with you. What exactly did it give him. You can describe the result in numbers to be specific.'})
+                    @include('../components/slide-testimonials.html', {'img': './img/testimonials/03.png', 'name': 'Ronald Richards', 'description': 'Describe the feedback or end result the person received after interacting with you. What exactly did it give him. You can describe the result in numbers to be specific.'})
+                    @include('../components/slide-testimonials.html', {'img': './img/testimonials/04.png', 'name': 'Cody Fisher', 'description': 'Describe the feedback or end result the person received after interacting with you. What exactly did it give him. You can describe the result in numbers to be specific.'})
+                </div>
+            </div>
+            <div class="testimonials__slider-btn testimonials__slider-btn_prev swiper-button-prev _btn-reset" data-slider_button="prev"></div>
+            <div class="testimonials__slider-btn testimonials__slider-btn_next swiper-button-next _btn-reset" data-slider_button="next"></div>
+        </div>
+    </div>
+ </section>
