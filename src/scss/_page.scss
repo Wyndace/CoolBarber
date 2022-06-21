@@ -2,9 +2,20 @@
   // .page__title
   &__title {
     margin: 0;
+    max-width: 580px;
     font: cl(font-fira-title);
     text-align: center;
     color: cl(color-white);
+    cursor: default;
+  }
+
+  // .page__subtitle
+  &__subtitle {
+    margin: 0;
+    max-width: 580px;
+    font: cl(font-base);
+    text-align: center;
+    color: cl(color-port);
   }
 
   // .page__hero
@@ -15,5 +26,10 @@
   // .page__aboutus
   &__aboutus {
     padding: fluid-value(100, 120) 0;
+  }
+
+  // .page__testimonials
+  &__testimonials {
+    padding: 0 0 fluid-value(100, 120);
   }
 }
