@@ -50,14 +50,14 @@ const server = () => {
 
 const watcher = () => {
     gulp.watch(path.html.watch, htmlTask).on("all", browserSync.reload);
-    gulp.watch(path.scss.watch, scssTask);
+    gulp.watch(path.scss.watch, scssTask).on("all", browserSync.reload);
     gulp.watch(path.img.watch, imgTask).on("all", browserSync.reload);
     gulp.watch(path.svg.watch, svg2spriteTask).on("all", browserSync.reload);
     gulp.watch(path.resources.watch, resourcesTask).on("all", browserSync.reload);
     gulp.watch(path.video.watch, videoTask).on("all", browserSync.reload);
     gulp.watch(path.fonts.watch, fontsTask).on("all", browserSync.reload);
     gulp.watch(path.js.watch, jsTask).on("all", browserSync.reload);
-    gulp.watch(path.fonts.dest + '/*.woff2', fonts2scssTask);
+    gulp.watch(path.fonts.dest + '/*.woff2', fonts2scssTask).on("all", browserSync.reload);
 }
 
 // =================================================================================================================================================================================================================================================================
