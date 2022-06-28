@@ -1,0 +1,12 @@
+<section class="page__our-price our-price" id="our-price">
+    <div class="our-price__container _container">
+       <h2 class="our-price__title page__title">Our Price</h2>
+        <p class="our-price__text page__subtitle">Subheading that reveals the details of the title and calls for the targeted action</p>
+        <ul class="our-price__list _list-reset">
+            @include('../components/price/price-item.html', {'img': './img/price/01.png', 'title': 'Haircuts'})
+            @include('../components/price/price-item.html', {'img': './img/price/02.png', 'title': 'Beard & Mo'})
+            @include('../components/price/price-item.html', {'img': './img/price/03.png', 'title': 'Shaving'})
+            @include('../components/price/price-item.html', {'img': './img/price/04.png', 'title': 'Waxing'})
+        </ul>
+    </div>
+ </section>

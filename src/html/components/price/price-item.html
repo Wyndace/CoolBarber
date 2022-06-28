@@ -1,0 +1,16 @@
+<li class="our-price__item item-price">
+  <article class="item-price__body">
+    <div class="item-price__img _img-holder">
+      <img src="@img" alt="@title">
+    </div>
+    <h3 class="item-price__title">@title</h3>
+    <ul class="item-price__list price-list _list-reset">
+            @include('./price-list.html', {'title': 'Regular Haircut', 'time-count': '120', 'time-unit': 'min', 'money-unit': '$', 'money-count': '20'})
+            @include('./price-list.html', {'title': 'Haircut + Shave', 'time-count': '60', 'time-unit': 'min', 'money-unit': '$', 'money-count': '19'})
+            @include('./price-list.html', {'title': 'Haircut + Beard Trim', 'time-count': '60', 'time-unit': 'min', 'money-unit': '$', 'money-count': '100'})
+            @include('./price-list.html', {'title': 'Beard Trim', 'time-count': '100', 'time-unit': 'min', 'money-unit': '$', 'money-count': '228'})
+            @include('./price-list.html', {'title': 'Hair Tatoo', 'time-count': '60', 'time-unit': 'min', 'money-unit': '$', 'money-count': '1337'})
+            @include('./price-list.html', {'title': 'Facial', 'time-count': '60', 'time-unit': 'min', 'money-unit': '$', 'money-count': '20'})
+    </ul>
+  </article>
+</li>

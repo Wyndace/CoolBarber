@@ -1,0 +1,33 @@
+.our-price {
+  background-color: cl(color-oil);
+
+  // .our-price__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .our-price__title
+  &__title {
+  }
+
+  // .our-price__text
+  &__text {
+  }
+
+  // .our-price__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: fluid-value(30, 60);
+    width: 100%;
+    gap: 40px 20px;
+  }
+
+  // .our-price__item
+  &__item {
+  }
+}

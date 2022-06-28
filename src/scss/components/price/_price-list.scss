@@ -1,0 +1,58 @@
+.price-list {
+  // .price-list__item
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .price-list__title
+  &__title {
+    margin: 0;
+    font: cl(font-base);
+    color: cl(color-port);
+  }
+
+  // .price-list__options
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  // .price-list__time
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font: cl(font-base);
+    color: cl(color-bronco);
+    gap: 2px;
+  }
+
+  // .price-list__time-count
+  &__time-count {
+  }
+
+  // .price-list__time-unit
+  &__time-unit {
+  }
+
+  // .price-list__money
+  &__money {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font: cl(font-fira-bold);
+    color: cl(color-white);
+    gap: 2px;
+  }
+
+  // .price-list__money-unit
+  &__money-unit {
+  }
+
+  // .price-list__money-count
+  &__money-count {
+  }
+}
