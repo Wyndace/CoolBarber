@@ -11,7 +11,7 @@
 
   // .page__subtitle
   &__subtitle {
-    margin: 0;
+    margin: fluid-value(12, 24) 0 0;
     max-width: 580px;
     font: cl(font-base);
     text-align: center;
@@ -31,5 +31,10 @@
   // .page__testimonials
   &__testimonials {
     padding: 0 0 fluid-value(100, 120);
+  }
+
+  // .page__our-price
+  &__our-price {
+    padding: fluid-value(100, 120) 0;
   }
 }
