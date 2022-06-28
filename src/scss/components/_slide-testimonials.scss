@@ -32,5 +32,9 @@
     max-width: fit-content;
     font: cl(font-base);
     color: cl(color-tomato);
+
+    &._underline::after {
+      bottom: 1px;
+    }
   }
 }
