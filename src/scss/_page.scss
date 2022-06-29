@@ -37,4 +37,9 @@
   &__our-price {
     padding: fluid-value(100, 120) 0;
   }
+
+  // .page__consultation
+  &__consultation {
+    padding: 0 0 fluid-value(100, 120);
+  }
 }

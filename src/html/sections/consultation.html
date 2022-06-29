@@ -1,0 +1,27 @@
+<section class="page__consultation consultation" id="consultation">
+    <div class="consultation__container _container">
+        <div class="consultation__body">
+            <h2 class="consultation__title">Get in consultation with our expert barbers</h2>
+            <p class="consultation__subtitle">Expand Call-to-Action Details</p>
+            <form data-test data-form action="#" class="form consultation__form">
+                <fieldset class="form__body _fieldset-reset">
+                    <legend class="_hidden">Consultation Form</legend>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <input type="tel" data-form_require data-form_input_tel placeholder="+79851648221" name="tel" id="tel" class="form__input">
+                            <label for="tel" class="form__label">Phone</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="email" data-form_require data-form_input_email placeholder="wyndace@stylelifeweb.ru" name="email" id="email" class="form__input">
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+                        <button type="submit" data-submit class="form__btn btn btn_secondary _btn-reset">Book now</button>
+                    </div>
+                    <div class="form__item">
+                        @include('../mixins/checkbox.html', {'text': 'By clicking on the button, you agree to the <a data-scroll_to="#" href="#" class="form__link _link-reset _underline">terms&nbsp;of&nbsp;processing&nbsp;personal&nbsp;data</a>', 'parent-class': 'form', 'id': 'terms', 'name': 'terms', 'type': 'checkbox', 'data-attrs': 'data-form_require checked'})
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+ </section>

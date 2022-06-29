@@ -1,0 +1,39 @@
+.consultation {
+  background-color: cl(color-oil);
+
+  // .consultation__container
+  &__container {
+    background-color: cl(color-tomato);
+  }
+
+  // .consultation__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: fluid-value(30, 70) fluid-value(30, 150);
+    gap: 5px;
+  }
+
+  // .consultation__title
+  &__title {
+    margin: 0 0 15px;
+    font: cl(font-playfair-black);
+    text-align: center;
+    color: cl(color-black);
+  }
+
+  // .consultation__subtitle
+  &__subtitle {
+    margin: 0 0 35px;
+    font: cl(font-base);
+    font-size: fluid-value(15, 21);
+    text-align: center;
+    color: cl(color-dune);
+  }
+
+  // .consultation__form
+  &__form {
+  }
+}
