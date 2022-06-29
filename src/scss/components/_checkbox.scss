@@ -1,0 +1,94 @@
+.checkbox {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  min-height: 20px;
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: none;
+    pointer-events: none;
+  }
+
+  &__text {
+    display: inline-block;
+    font: cl(font-base);
+    line-height: 100%;
+    text-align: left;
+    color: cl(color-port);
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    margin: auto 0;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      flex-shrink: 0;
+      margin-right: fluid-value(5, 10);
+      border: 1px solid cl(color-black);
+      width: 12px;
+      height: 12px;
+      box-sizing: border-box;
+      background-color: transparent;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      margin-right: fluid-value(5, 10);
+      width: 12px;
+      height: 12px;
+      color: cl(color-white);
+      fill: currentcolor;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.78154 4.93344L7.31074 0.333496L8 1.03353L2.78154 6.3335L0 3.5085L0.689263 2.80847L2.78154 4.93344Z' fill='%23F7F7F7'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input:checked + &__label::after {
+    border: none;
+    background-color: cl(color-black);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__label:hover + &__label::before {
+    box-shadow: -1px 1px 8px cl(color-black);
+  }
+
+  &__input:focus + &__label::before {
+    box-shadow: -1px 1px 8px cl(color-black);
+  }
+
+  &__input:disabled + &__label {
+    border: none;
+    color: #8d8d8d;
+    cursor: none;
+    pointer-events: none;
+  }
+
+  &__input:disabled + &__label::before {
+    border: none;
+    background-color: #8d8d8d;
+    pointer-events: none;
+  }
+}
