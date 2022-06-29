@@ -1,29 +1,35 @@
+@use "sass:color";
+
 .form {
-  // .form__sending
-  &__sending {
-  }
+  width: 100%;
 
   // .form__body
   &__body {
-
-  }
-
-  // .form__title
-  &__title {
-  }
-
-  // .form__fields
-  &__fields {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+  }
+
+  // .form__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 20px;
   }
 
   // .form__item
   &__item {
     position: relative;
+    flex-grow: 1;
+    height: 100%;
     font: cl(font-base);
-    color: cl(color-black);
+    color: cl(color-white);
   }
 
   // .form__label
@@ -51,10 +57,41 @@
 
   // .form__btn
   &__btn {
-    min-height: 50px;
+    flex-grow: 1;
   }
 
   .form__checkbox {
+  }
+
+  &__link._underline {
+    &::after {
+      width: 100%;
+      background: cl(color-white);
+      opacity: 1;
+      transition: bottom 0.5s ease 0s, opacity 0.5s ease 0s;
+    }
+
+    &:active::after,
+    &._tapped::after {
+      bottom: -4px;
+      width: 100%;
+      opacity: 0;
+    }
+
+    @media (any-hover: hover) {
+      &:hover::after {
+        bottom: -4px;
+        width: 100%;
+        opacity: 0;
+      }
+
+      &._tapped::after {
+        bottom: -2px;
+        width: 100%;
+        opacity: 1;
+        transform: none;
+      }
+    }
   }
 
   &__textarea ~ &__label {
@@ -73,12 +110,13 @@
   &__textarea {
     appearance: none;
     display: block;
-    border: none;
-    padding: 10px 20px;
+    border: 1px solid cl(color-black);
+    padding: 20px 25px;
     width: 100%;
-    height: 50px;
+    height: 100%;
     font: inherit;
     color: inherit;
+    background-color: transparent;
 
     &::placeholder {
       color: transparent;
@@ -93,17 +131,7 @@
 
   &__input._error,
   &__textarea._error {
-    border: 2px currentColor solid;
-    color: cl(color-error);
-  }
-
-  [data-form_require] ~ &__label::after {
-    content: "*";
-  }
-
-  &__input._error ~ &__label,
-  &__textarea._error ~ &__label {
-    color: inherit;
+    border: 1px solid cl(color-white);
   }
 
   &__input:focus ~ &__label,
